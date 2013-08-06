@@ -1,0 +1,37 @@
+<% if current_user.present? %>
+<div class = "header">
+  <div id = "header-wrapper">
+    <div class = "site-title"><strong>Ven-Owe</strong></div>
+    <div id = "logout-header-nav">
+      <!--this is the place to show the username and logout-->
+      <div id = "wrapper-account-name">
+        <div id = "account-name">Account:    <%= current_user.email%> 
+        </div>
+      </div>
+       <div id = "wrapper-logout">
+        <%= link_to 'Log out', destroy_user_session_path, class: 'btn btn-primary', method: :delete %>
+       </div>
+    </div>
+  </div>
+</div>
+  
+<% else %>
+  <div class = "header">
+  <%= form_for(User.new, :as => 'user', :url => session_path('user')) do |f| %>
+    <div id = "header-wrapper">
+      <div class="site-title"><strong>The Mock Interview Initiative</strong></div>
+      <div id="header-nav">
+        <div style = "display:inline-block" >
+         <!--  <input type="text" style="margin-top:10px" class="input-medium" placeholder="Email"> -->
+          <div style = "display:inline-block; margin-top:5px"><%= f.email_field :email, :autofocus => true %></div>
+
+          <!-- <input type="password" style="margin-top:10px" class="input-medium" placeholder="Password"> -->
+          <div style = "display:inline-block; margin-top:5px"><%= f.password_field :password, :autofocus => true %></div>
+
+          <button type="submit" class="btn btn-primary" style= "display:inline-block; margin-top:-10px">Sign in</button>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>
+<% end %>

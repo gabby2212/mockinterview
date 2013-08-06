@@ -1,0 +1,66 @@
+
+<div class = "container-wrapper">
+  <div class = "user-container">
+    <div id="myCarousel" class="carousel slide container" style="width:550px;height:370px">
+      <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class></li>
+      <li data-target="#myCarousel" data-slide-to="2" class></li>
+    </ol>  
+    <div class= "carousel-inner">
+      <div class = "active item carousel-image" >
+        <img class = "carousel-image" src = <%= asset_path('pic1.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>It's free. It's simple. It's efficient.</h4>
+        </div>
+      </div>
+      <div class="item carousel-image">
+        <img class = "carousel-image" src = <%= asset_path('pic2.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>Want to practice interviews? Not enough slots at CCE?</h4>
+        <p>Register now and start practicing right away</p>
+        </div>
+      </div>
+      <div class = "item carousel-image">
+        <img class = "carousel-image" src = <%= asset_path('pic3.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>Our ambition: your success</h4>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+    </div>
+  </div>
+  <div class="signup-container">
+    <div id="sign-up-box">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+      <div class="box-title-wrapper">
+        <div class="box-title">
+          <h2>Sign up</h2>
+        </div>
+      </div>
+      <div class= "box-content">
+      <div>
+        <div class = "sign-up-field">
+          <div class ="label-wrapper">Email:</div>
+          <!-- <input id ="signup_email" name ="email" class ="input-medium" style="width:189px" type="text"> -->
+          <div style = "width:159px;display:inline-block"><%= f.email_field :email, :autofocus => true %></div>
+        </div>
+        <div class = "sign-up-field">
+          <div class ="label-wrapper">Password:</div>
+           <div style = "width:159px;display:inline-block"><%= f.password_field :password %></div>
+        </div>
+        <div class = "sign-up-field">
+          <div class ="label-wrapper">Confirm Password:</div>
+          <div style = "width:159px;display:inline-block"> <%= f.password_field :password_confirmation %></div>
+        </div>
+        <br></br>
+        <div class = "sign-up-field">
+          <input class = "btn btn-primary btn-block" type= "submit" value="Sign up now!" >
+        </div>   
+      
+    </div>
+  </div>
+  <%end%>
