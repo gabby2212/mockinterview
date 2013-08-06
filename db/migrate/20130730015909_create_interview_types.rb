@@ -1,6 +1,6 @@
 class CreateInterviewTypes < ActiveRecord::Migration
   def up
-  	create_table :interview_types do |t|
+  	create_table :interview_type do |t|
       t.string :name
       t.text :description
  
@@ -8,6 +8,6 @@ class CreateInterviewTypes < ActiveRecord::Migration
   end
 
   def down
-  	drop_table :interview_types
+  	drop_table :interview_type
   end
 end

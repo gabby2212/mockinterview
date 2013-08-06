@@ -11,9 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730020306) do
+ActiveRecord::Schema.define(:version => 20130806041826) do
 
-  create_table "interview_types", :force => true do |t|
+  create_table "free_time", :force => true do |t|
+    t.integer "week_day"
+    t.text    "time"
+  end
+
+  create_table "interview_type", :force => true do |t|
     t.string "name"
     t.text   "description"
   end

@@ -3,10 +3,15 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
+group :development do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'pg'
 
 
 # Gems used only for assets and not required
