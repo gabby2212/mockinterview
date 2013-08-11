@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
   def index
+  	@student = current_user.student
+  	@matches = @student.find_matches
   end
 
   def show

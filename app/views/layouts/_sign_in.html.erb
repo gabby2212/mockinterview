@@ -1,7 +1,7 @@
 <% if current_user.present? %>
 <div class = "header">
   <div id = "header-wrapper">
-    <div class = "site-title"><strong>Ven-Owe</strong></div>
+    <div class = "site-title"><strong>The Mock Interview Initiative</strong></div>
     <div id = "logout-header-nav">
       <!--this is the place to show the username and logout-->
       <div id = "wrapper-account-name">
@@ -9,7 +9,7 @@
         </div>
       </div>
        <div id = "wrapper-logout">
-        <%= link_to 'Log out', destroy_user_session_path, class: 'btn btn-primary', method: :delete %>
+        <%= link_to 'Log out', destroy_user_session_path, class: 'btn btn-primary', style: "margin-left:400px", method: :delete %>
        </div>
     </div>
   </div>

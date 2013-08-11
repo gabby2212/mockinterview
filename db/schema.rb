@@ -11,16 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806041826) do
+ActiveRecord::Schema.define(:version => 20130810235623) do
 
-  create_table "free_time", :force => true do |t|
+  create_table "free_times", :force => true do |t|
     t.integer "week_day"
-    t.text    "time"
+    t.integer "time"
+    t.integer "student_id"
   end
 
-  create_table "interview_type", :force => true do |t|
-    t.string "name"
-    t.text   "description"
+  create_table "students", :force => true do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "school"
+    t.string  "degree"
+    t.integer "year_of_graduation"
+    t.string  "major"
+    t.string  "interviewing_for"
+    t.string  "interview_type"
+    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|

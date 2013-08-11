@@ -1,5 +1,6 @@
 Mockinterviewinit::Application.routes.draw do
   resources :welcome
+  resources :students
   devise_for :users
 
 

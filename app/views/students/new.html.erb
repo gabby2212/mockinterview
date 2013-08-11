@@ -1,0 +1,42 @@
+<legend class="title-p">Profile</legend>
+<div class="columns">
+
+	<%= form_for @student do |f| %>
+		<br/>
+		<div class="key">First Name </div>
+		<%= f.text_field :first_name %>
+	  	<br/>
+	  	<div class="key">Last Name</div>
+	  	<%= f.text_field :last_name %>
+	  	<br/>
+	  	<div class="key">School</div>
+	  	<%= f.select(:school, options_for_select(['SEAS', 'CC', 'GS']), {}, {:class => "select"}) %>
+	  	<br/>
+	  	<div class="key">Degree</div>
+	  	<%= f.select(:degree, options_for_select(['BA', 'BS', 'MA']), {}, {:class => "select"})%>
+	  	<br/>
+	  	<div class="key">Graduation Year</div>
+	  	<%= f.number_field :year_of_graduation %>
+	  	<br/>
+	  	<div class="key">Major</div>
+	  	<%= f.text_field :major %>
+	  	<br/>
+	  	<div class="key">Position Type </div>
+	  	<%= f.select(:interviewing_for, options_for_select(['Casual', 'Full Time', 'Part Time']), {}, {:class => "select"}) %>
+	  	<br/>
+	  	<div class="key">Industry </div>
+	  	<%= f.select(:interview_type, options_for_select(['Academic', 'Advertisement/Marketing/PR', 'Consulting', 'Consumer Products', 'Engineering', 'Entertainment', 'Financial Services', 'Government', 'Healthcare', 'Law', 'Media', 'Programming', 'Non-Profit']), {}, {:class => "select"}) %>
+	  	<br/>
+	  	<div class="key"><strong>Available Times:</div></strong>
+	  	<br/>
+	  	<%= f.fields_for :free_times do |builder| %>
+	      <%= render 'free_times_fields', f: builder %>
+	    <% end %>
+	    <div class="key"><%= link_to_add_fields "Add Time", f, :free_times %></div>
+	    <br/>
+	  	<%= f.submit "Save", :class => 'simple-button'%>
+	<%end%>
+	</div>
+  
+</div>
+

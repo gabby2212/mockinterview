@@ -1,13 +1,14 @@
 class CreateFreeTimes < ActiveRecord::Migration
   def up
-  	create_table :free_time do |t|
+  	create_table :free_times do |t|
       t.integer :week_day
-      t.text :time
+      t.integer :time
+      t.references :student
  
     end
   end
 
   def down
-  	drop_table :free_time
+  	drop_table :free_times
   end
 end

@@ -1,1 +1,21 @@
-<h1>Welcome to The Mock Interview Initiative!</h1>
+<div class="matches-box">
+	<%if @matches.any?%>
+		<h3>We found you a match!</h3>
+		<p>The following people are practicing for the same interview type as you, and have similar availabilities! Email them and set up a mockinterview.</p>
+		<%@matches.each do |m|%>
+			<%= m.first_name%>
+			<%= m.last_name%>
+			<br/>
+			Email: <%= m.user.email%>
+			<br/>
+			Available:
+			<%m.convenient.each do |c| %>
+				<p><%=c%></p>
+			<%end%>
+			<br/>
+		<%end%>
+	<% else %>
+		<h3>I'm sorry we haven't found you any matches yet</h3>
+		<p> Check back later! As more users sign up you will be matched with them and they'll be able to contact you!</p>
+	<% end %>
+</div>
