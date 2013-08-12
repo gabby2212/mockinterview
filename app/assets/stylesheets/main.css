@@ -44,7 +44,7 @@
 }
 #header-wrapper {
 	margin: 0px auto;
-	width: 1000px;
+	width: 1500px;
 }
 .header{
 	height:60px ;
@@ -162,8 +162,13 @@
 	font-size: 15px;
 }
 
+#user_email{
+	width:150px;
+}
 
-
+#user_password{
+	width: 150px;
+}
 
 #cy {
 	height: 100%;
