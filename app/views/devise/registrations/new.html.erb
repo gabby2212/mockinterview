@@ -9,22 +9,23 @@
     </ol>  
     <div class= "carousel-inner">
       <div class = "active item carousel-image" >
-        <img class = "carousel-image" src = <%= asset_path('pic1.jpg')%> alt=""/>
+        <img class = "carousel-image" src = <%= asset_path('nyc.jpg')%> alt=""/>
         <div class = "carousel-caption">
-        <h4>It's free. It's simple. It's efficient.</h4>
+        <h4>Want to ace your job interviews?</h4>
+        <p>Register now and find peers to practice with</p>
         </div>
       </div>
       <div class="item carousel-image">
-        <img class = "carousel-image" src = <%= asset_path('pic2.jpg')%> alt=""/>
+        <img class = "carousel-image" src = <%= asset_path('cc.jpg')%> alt=""/>
         <div class = "carousel-caption">
-        <h4>Want to practice interviews? Not enough slots at CCE?</h4>
-        <p>Register now and start practicing right away</p>
+         <h4>It's free. It's simple. It's efficient.</h4>
+       
         </div>
       </div>
       <div class = "item carousel-image">
-        <img class = "carousel-image" src = <%= asset_path('pic3.jpg')%> alt=""/>
+        <img class = "carousel-image" src = <%= asset_path('Corporate.jpg')%> alt=""/>
         <div class = "carousel-caption">
-        <h4>Our ambition: your success</h4>
+        <h4>Help others succeed and get twice as much in return</h4>
         </div>
       </div>
     </div>
@@ -46,15 +47,15 @@
         <div class = "sign-up-field">
           <div class ="label-wrapper">Email:</div>
           <!-- <input id ="signup_email" name ="email" class ="input-medium" style="width:189px" type="text"> -->
-          <div style = "width:159px;display:inline-block"><%= f.email_field :email, :autofocus => true %></div>
+          <div style = "width:159px;display:block"><%= f.email_field :email, :autofocus => true %></div>
         </div>
         <div class = "sign-up-field">
           <div class ="label-wrapper">Password:</div>
-           <div style = "width:159px;display:inline-block"><%= f.password_field :password %></div>
+           <div style = "width:159px;display:block"><%= f.password_field :password %></div>
         </div>
         <div class = "sign-up-field">
           <div class ="label-wrapper">Confirm Password:</div>
-          <div style = "width:159px;display:inline-block"> <%= f.password_field :password_confirmation %></div>
+          <div style = "width:159px;display:block"> <%= f.password_field :password_confirmation %></div>
         </div>
         <br></br>
         <div class = "sign-up-field">
