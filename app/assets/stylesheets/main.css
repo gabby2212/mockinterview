@@ -44,7 +44,7 @@
 }
 #header-wrapper {
 	margin: 0px auto;
-	width: 1500px;
+	width: 980px;
 }
 .header{
 	height:60px ;
@@ -76,7 +76,7 @@
 	height:370px;
 	width: 550px;
 }
-#header-nav{
+#header-nav{1500px
 	display: block;
 	float: right;
 	width: 530px;
