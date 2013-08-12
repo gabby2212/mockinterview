@@ -2,3 +2,5 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run Mockinterviewinit::Application
+require 'sass/plugin/rack'
+use Sass::Plugin::Rack
