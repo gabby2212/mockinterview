@@ -32,7 +32,7 @@
 	  	<%= f.fields_for :free_times do |builder| %>
 	      <%= render 'free_times_fields', f: builder %>
 	    <% end %>
-	    <div class="key"><%= link_to_add_fields "Add Time", f, :free_times %></div>
+	    <div><%= link_to_add_fields "Add Time", f, :free_times %></div>
 	    <br/>
 	  	<%= f.submit "Save", :class => 'simple-button'%>
 	<%end%>

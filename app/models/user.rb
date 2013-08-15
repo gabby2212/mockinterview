@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   def is_student?
-  	if self.student
-  	end
+  	student.present? && student.persisted? 
   end
 end
