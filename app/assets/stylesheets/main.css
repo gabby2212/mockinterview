@@ -124,6 +124,7 @@
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	width: 400px
+	line-height: 4;
 	
 	
 	/* background-color:rgba(59, 117, 250, 0.1); */
@@ -156,7 +157,7 @@
 #sign-up-box .box-content .sign-up-field .label-wrapper {
 	display: block;
 	float: left;
-	width: 140px;
+	width: 150px;
 	line-height: 30px;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 15px;
@@ -234,4 +235,9 @@
 
 .btn-prim{
 	margin-left: 400px;
+}
+
+.user-fields{
+	width: 150px;
+	display: inline-block;
 }

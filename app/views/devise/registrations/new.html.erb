@@ -47,15 +47,15 @@
         <div class = "sign-up-field">
           <div class ="label-wrapper">Email:</div>
           <!-- <input id ="signup_email" name ="email" class ="input-medium" style="width:189px" type="text"> -->
-          <div style = "width:159px;display:block"><%= f.email_field :email, :autofocus => true %></div>
+          <div><%= f.email_field :email, :autofocus => true, class: "user-fields" %></div>
         </div>
         <div class = "sign-up-field">
           <div class ="label-wrapper">Password:</div>
-           <div style = "width:159px;display:block"><%= f.password_field :password %></div>
+           <div><%= f.password_field :password, class: "user-fields" %></div>
         </div>
         <div class = "sign-up-field">
           <div class ="label-wrapper">Confirm Password:</div>
-          <div style = "width:159px;display:block"> <%= f.password_field :password_confirmation %></div>
+          <div> <%= f.password_field :password_confirmation, class: "user-fields" %></div>
         </div>
         <br></br>
         <div class = "sign-up-field">
