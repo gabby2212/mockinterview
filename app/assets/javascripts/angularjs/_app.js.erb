@@ -1,8 +1,0 @@
-var app = angular.module('app', ["ngResource", "ngCookies"]);
-
-
-app.config(["$routeProvider", function($routeProvider) {
-  $routeProvider
-  .when('/', {templateUrl: '<%= asset_path "conenctions.html" %>', controller: 'ConnectionsCtrl'})
-
-}])

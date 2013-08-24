@@ -1,1 +1,62 @@
-
+<div class = "container-wrapper">
+  <div class = "user-container">
+    <div id="myCarousel" class="carousel slide container" style="width:550px;height:370px">
+      <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class></li>
+      <li data-target="#myCarousel" data-slide-to="2" class></li>
+    </ol>  
+    <div class= "carousel-inner">
+      <div class = "active item carousel-image" >
+        <img class = "carousel-image" src = <%= asset_path('nyc.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>Want to ace your job interviews?</h4>
+        <p>Register now and find peers to practice with</p>
+        </div>
+      </div>
+      <div class="item carousel-image">
+        <img class = "carousel-image" src = <%= asset_path('cc.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+         <h4>It's free. It's simple. It's efficient.</h4>
+       
+        </div>
+      </div>
+      <div class = "item carousel-image">
+        <img class = "carousel-image" src = <%= asset_path('Corporate.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>Help others succeed and get twice as much in return</h4>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+    </div>
+  </div>
+  <div id="sign-up">
+    <div class="sign-up-container clearfix">
+      <%= form_for(User.new, :as => 'user', :url => welcome_index_path('user')) do |f|%>
+      <div class="title-wrapper">
+        <div class="title">Sign up</div>
+      </div>
+      <div>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">Email:</div>
+          <%= f.email_field :email, :autofocus => true, class: "field2" %>
+        </div>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">Password:</div>
+           <%= f.password_field :password, class: "field2" %>
+        </div>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">Confirm Password:</div>
+          <%= f.password_field :password_confirmation, class: "field2" %>
+        </div>
+        <div>
+          <button type="submit" class="simple-button">Sign up now!</button>
+        </div>   
+      
+     </div>
+    </div>
+  </div>
+</div>
+<%end%>

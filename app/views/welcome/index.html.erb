@@ -32,34 +32,31 @@
       <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
     </div>
   </div>
-  <div class="signup-container">
-    <div id="sign-up-box">
+  <div id="sign-up">
+    <div class="sign-up-container clearfix">
       <%= form_for(User.new, :as => 'user', :url => welcome_index_path('user')) do |f|%>
-      <div class="box-title-wrapper">
-        <div class="box-title">
-          <h2>Sign up</h2>
-        </div>
+      <div class="title-wrapper">
+        <div class="title">Sign up</div>
       </div>
-      <div class= "box-content">
       <div>
-        <div class = "sign-up-field">
-          <div class ="label-wrapper">Email:</div>
-          <!-- <input id ="signup_email" name ="email" class ="input-medium" style="width:189px" type="text"> -->
-          <div><%= f.email_field :email, :autofocus => true, class: "user-fields" %></div>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">Email:</div>
+          <%= f.email_field :email, :autofocus => true, class: "field2" %>
         </div>
-        <div class = "sign-up-field">
-          <div class ="label-wrapper">Password:</div>
-           <div><%= f.password_field :password, class: "user-fields" %></div>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">Password:</div>
+           <%= f.password_field :password, class: "field2" %>
         </div>
-        <div class = "sign-up-field">
-          <div class ="label-wrapper">Confirm Password:</div>
-          <div> <%= f.password_field :password_confirmation, class: "user-fields" %></div>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">Confirm Password:</div>
+          <%= f.password_field :password_confirmation, class: "field2" %>
         </div>
-        <br></br>
-        <div class = "sign-up-field">
-          <input class = "btn btn-primary btn-block" type= "submit" value="Sign up now!" >
+        <div>
+          <button type="submit" class="simple-button">Sign up now!</button>
         </div>   
       
+     </div>
     </div>
   </div>
-  <%end%>
+</div>
+<%end%>

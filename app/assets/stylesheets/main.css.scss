@@ -1,9 +1,6 @@
 @CHARSET "UTF-8";
 
 /*-------------------------------------------------------------*/
-/* FONTS  */
-
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 /*-------------------------------------------------------------*/
 /* GLOBAL DEFAULTS */
@@ -76,7 +73,7 @@
 	height:370px;
 	width: 550px;
 }
-#header-nav{1500px
+#header-nav{
 	display: block;
 	float: right;
 	width: 530px;
@@ -124,7 +121,6 @@
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	width: 400px
-	line-height: 4;
 	
 	
 	/* background-color:rgba(59, 117, 250, 0.1); */
@@ -163,14 +159,6 @@
 	font-size: 15px;
 }
 
-#user_email{
-	width:150px;
-}
-
-#user_password{
-	width: 150px;
-}
-
 #cy {
 	height: 100%;
 	width: 100%;
@@ -198,6 +186,7 @@
 	line-height: 2.5;
 }
 .simple-button {
+	font-family: 'Varela Round', sans-serif;
     padding: 5px 10px;
     display: inline;
     background: #777 url(button.png) repeat-x bottom;
@@ -240,4 +229,99 @@
 .user-fields{
 	width: 150px;
 	display: inline-block;
+}
+
+#sign-in-header{
+	background-color: #505050;
+	padding: 10px;
+	label{
+		font-family: 'Varela Round', sans-serif;
+		color: white;
+		display: inline;
+		padding-right: 5px;
+	}
+
+	.title{
+		font-family: 'Varela Round', sans-serif;
+		float: left;
+		color: white;
+		font-size: 30px;
+	}
+
+	.field{
+		height: 25px;
+		border-radius: 8px;
+		display: inline;
+		width:150px;
+	}
+
+	.header-wrapper{
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.simple-button{
+		width: 80px;
+		text-align: center;
+		height: 30px;
+		display: inline;
+	}
+	.form-container{
+		float: right;
+	}
+}
+
+#sign-up{
+	position: relative;
+	label{
+		font-family: 'Varela Round', sans-serif;
+		display: inline;
+		padding-right: 5px;
+		font-size: 15px;
+		line-height: 3;
+	}
+
+	.sign-up-container{
+		box-shadow: 2px 2px 1px #888888;
+		font-family: 'Varela Round', sans-serif;
+		margin-top: 20px;
+		padding: 0 30px 30px 30px;
+		width: 43%;
+		float: right;
+		border-color: #A8A8A8;
+		border: 1px solid;
+	}
+	.title{
+		font-family: 'Varela Round', sans-serif;
+		float: left;
+		font-size: 30px;
+	}
+	.field2{
+		width: 50%;
+		height: 25px;
+		border-radius: 8px;
+		display: inline;
+		float:right;
+		margin: 10px 0;
+	}
+
+	.sign-up-form-field{
+		padding-bottom: 20px;
+		display: inline;
+	}
+	.field-label{
+		font-family: 'Varela Round', sans-serif;
+		float: left;
+		text-align: right;
+		line-height: 3;
+	}
+
+	.title-wrapper{
+		padding-bottom: 50px;
+		padding-top: 10px;
+	}
+
+	button{
+		float:right;
+	}
 }

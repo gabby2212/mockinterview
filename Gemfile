@@ -29,7 +29,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'thin'
-gem "active_model_serializers"
+gem 'sass'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
