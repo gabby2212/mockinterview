@@ -3,7 +3,10 @@ class StudentsController < ApplicationController
   end
 
   def show
-  	@student = current_user.student
+    respond_to do |format|
+      @student = current_user.student
+      format.json{render json: @student}
+    end
   end
 
   def create

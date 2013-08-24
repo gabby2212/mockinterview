@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
   	if current_user.is_student?
-    	welcome_index_path
+    	connections_index_path
     else
     	new_student_path
     end

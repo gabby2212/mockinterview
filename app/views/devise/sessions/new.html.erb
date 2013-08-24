@@ -1,17 +1,37 @@
-<h2>Sign in</h2>
+<div id="static-wrapper">
+  <div id="about-box" class="clearfix">
+    <div class="box-title-wrapper">
+      <div class="box-title">
+        <h1>Sign In</h1>
+      </div>
+    </div>
+    <div class="box-content">
+			<%= horizontal_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+				<%= devise_error_messages! %> 
+			  <%= f.input :login, label: 'Username or Email' %>
+			  <%= f.input :password %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+				<% if devise_mapping.rememberable? -%>
+				  <%= f.input :remember_me, as: :wrapped_boolean, label: 'Keep me signed in' %>
+				<% end %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+				<div class="controls">
+					<%= render "devise/shared/links" %>
+				</div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+				<%= f.fancy_submit 'Sign in' %>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+			<% end %>
+    </div>
+    <div class="back-to-wrapper clearfix"> 
+      <a href="/"><div class="back-to-home"></div></a>
+    </div>
+  </div>
+</div>
 
-<%= render "users/shared/links" %>
+</div>
+<script>
+  $(function() {
+    Moonlyt.signedOutNav.active('none');
+  })
+</script>

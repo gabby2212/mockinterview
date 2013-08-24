@@ -4,7 +4,7 @@ class Student < ActiveRecord::Base
 	attr_accessible :first_name, :last_name, :school, :degree, :year_of_graduation, :major, :interview_type, :interviewing_for, :free_times, :free_times_attributes
 	accepts_nested_attributes_for :free_times, allow_destroy: :true, reject_if: lambda { |attributes| attributes[:week_day].blank? || attributes[:time].blank?}
 
-	def find_matches
+	def find_connections
 		all_students = Student.all
 		matches = []
 		all_students.each do |s|

@@ -1,21 +1,65 @@
-<div class="matches-box">
-	<%if @matches.any?%>
-		<h3>We found you a match!</h3>
-		<p>The following people are practicing for the same interview type as you, and have similar availabilities! Email them and set up a mockinterview.</p>
-		<%@matches.each do |m|%>
-			<%= m.first_name%>
-			<%= m.last_name%>
-			<br/>
-			Email: <%= m.user.email%>
-			<br/>
-			Available:
-			<%m.convenient.each do |c| %>
-				<p><%=c%></p>
-			<%end%>
-			<br/>
-		<%end%>
-	<% else %>
-		<h3>I'm sorry we haven't found you any matches yet</h3>
-		<p> Check back later! As more users sign up you will be matched with them and they'll be able to contact you!</p>
-	<% end %>
-</div>
+<div class = "container-wrapper">
+  <div class = "user-container">
+    <div id="myCarousel" class="carousel slide container" style="width:550px;height:370px">
+      <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class></li>
+      <li data-target="#myCarousel" data-slide-to="2" class></li>
+    </ol>  
+    <div class= "carousel-inner">
+      <div class = "active item carousel-image" >
+        <img class = "carousel-image" src = <%= asset_path('nyc.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>Want to ace your job interviews?</h4>
+        <p>Register now and find peers to practice with</p>
+        </div>
+      </div>
+      <div class="item carousel-image">
+        <img class = "carousel-image" src = <%= asset_path('cc.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+         <h4>It's free. It's simple. It's efficient.</h4>
+       
+        </div>
+      </div>
+      <div class = "item carousel-image">
+        <img class = "carousel-image" src = <%= asset_path('Corporate.jpg')%> alt=""/>
+        <div class = "carousel-caption">
+        <h4>Help others succeed and get twice as much in return</h4>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+    </div>
+  </div>
+  <div class="signup-container">
+    <div id="sign-up-box">
+      <%= form_for(User.new, :as => 'user', :url => welcome_index_path('user')) do |f|%>
+      <div class="box-title-wrapper">
+        <div class="box-title">
+          <h2>Sign up</h2>
+        </div>
+      </div>
+      <div class= "box-content">
+      <div>
+        <div class = "sign-up-field">
+          <div class ="label-wrapper">Email:</div>
+          <!-- <input id ="signup_email" name ="email" class ="input-medium" style="width:189px" type="text"> -->
+          <div><%= f.email_field :email, :autofocus => true, class: "user-fields" %></div>
+        </div>
+        <div class = "sign-up-field">
+          <div class ="label-wrapper">Password:</div>
+           <div><%= f.password_field :password, class: "user-fields" %></div>
+        </div>
+        <div class = "sign-up-field">
+          <div class ="label-wrapper">Confirm Password:</div>
+          <div> <%= f.password_field :password_confirmation, class: "user-fields" %></div>
+        </div>
+        <br></br>
+        <div class = "sign-up-field">
+          <input class = "btn btn-primary btn-block" type= "submit" value="Sign up now!" >
+        </div>   
+      
+    </div>
+  </div>
+  <%end%>
