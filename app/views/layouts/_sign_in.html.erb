@@ -2,15 +2,16 @@
   <% if current_user.present? %>
     <header>
       <div class="header-wrapper">
-        <div class="title"><%= link_to "The Mock Interview Initiative", root_path %></div>
-          <div>
-            <label>Email:</label><%= current_user.email%> 
+        <fieldset>
+          <div class="title"><%= link_to "The Mock Interview Initiative", root_path, class: "title", style: "text-decoration:none;" %></div>
+          <div class="form-container">
+            <div class="email-show">
+              <label>Email: <%= current_user.email%> </label>
+              <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "simple-button" %>
             </div>
           </div>
-           <div>
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "simple-button", style: "text-decoration:none;"%>
-           </div>
-        </div>   
+        </fieldset>
+        </div> 
     </header>    
   <% else %>
     <header>
