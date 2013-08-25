@@ -2,27 +2,26 @@
   <% if current_user.present? %>
     <header>
       <div class="header-wrapper">
-        <div class="title">The Mock Interview Initiative</div>
-          <!--this is the place to show the username and logout-->
+        <div class="title"><%= link_to "The Mock Interview Initiative", root_path %></div>
           <div>
-            <div>Account:    <%= current_user.email%> 
+            <label>Email:</label><%= current_user.email%> 
             </div>
           </div>
            <div>
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "simple-button", style: "text-decoration:none;"%>
            </div>
         </div>   
     </header>    
   <% else %>
     <header>
-      <%= form_for(User.new, :as => 'user', :url => session_path('user')) do |f| %>
+      <%= form_for(resource, :as => 'user', :url => session_path('user')) do |f| %>
       <div class="header-wrapper">
         <fieldset>
-            <div class="title">The Mock Interview Initiative</div>
+            <div class="title"><%= link_to "The Mock Interview Initiative", root_path, class: "title", style: "text-decoration:none;" %></div>
             <div>
               <div class="form-container">
-                <label>Email:</label><%= f.email_field :email, :autofocus => true, :class => 'field' %>
-                <label>Password:</label><%= f.password_field :password, :autofocus => true, :class => 'field' %>
+                <label>Email:</label><%= f.email_field :email, :autofocus => true, :class => 'field', style: "display:inline" %>
+                <label>Password:</label><%= f.password_field :password, :autofocus => true, :class => 'field', style: "display:inline" %>
                 <button type="submit" class="simple-button">Sign in</button>
               </div>
             </div>

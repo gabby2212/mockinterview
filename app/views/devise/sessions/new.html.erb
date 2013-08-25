@@ -1,17 +1,26 @@
-<h2>Sign in</h2>
+<div id="sign-in-devise">
+	<div class="sign-in-container">
+		<div class="title-wrapper">
+			<div class="title">Sign in</div>
+		</div>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<div class="errors">Your email or password were incorrect.</div>
+			<div class="sign-up-form-field clearfix">
+	          <div class="field-label">Email:</div>
+	          <%= f.email_field :email, :autofocus => true, class: "field" %>
+	        </div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+	        <div class="sign-up-form-field clearfix">
+	          <div class="field-label">Password:</div>
+	          <%= f.password_field :password, class: "field" %>
+	        </div>		  
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "users/shared/links" %>
+		  <% if devise_mapping.rememberable? -%>
+		    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+		  <% end -%>
+		<div>
+          <button type="submit" class="simple-button">Sign in</button>
+        </div>  
+		<% end %>
+	</div>
+</div>

@@ -269,6 +269,9 @@
 	.form-container{
 		float: right;
 	}
+	.field-with-erros{
+		display: inline;
+	}
 }
 
 #sign-up{
@@ -296,6 +299,7 @@
 		float: left;
 		font-size: 30px;
 	}
+
 	.field2{
 		width: 50%;
 		height: 25px;
@@ -317,7 +321,7 @@
 	}
 
 	.title-wrapper{
-		padding-bottom: 50px;
+		padding-bottom: 30px;
 		padding-top: 10px;
 	}
 
@@ -327,13 +331,66 @@
 
 	li{
 		color: #C00000;
-		font-size: 16px;
+		font-size: 14px;
 	}
 	ul{
 		list-style: none;
 	}
 	h2{
 		color: #C00000;
+		font-size: 14px;
+	}
+}
+#sign-in-devise{
+	.sign-in-container{
+		box-shadow: 2px 2px 1px #888888;
+		font-family: 'Varela Round', sans-serif;
+		margin-top: 20px;
+		margin-left: 145px;
+		padding: 0 30px 30px 30px;
+		width: 30%;
+		border-color: #A8A8A8;
+		border: 1px solid;
+	}
+	.title{
+		font-family: 'Varela Round', sans-serif;
+		float: left;
+		font-size: 30px;
+	}
+	.title:hover{
+		text-decoration: none;
+	}
+
+	.title-wrapper{
+		padding-bottom: 50px;
+		padding-top: 10px;
+	}
+	.field{
+		width: 50%;
+		height: 25px;
+		border-radius: 8px;
+		display: inline;
+		float:right;
+		margin: 10px 0;
+	}
+
+	.sign-up-form-field{
+		padding-bottom: 20px;
+		display: inline;
+	}
+	.field-label{
+		font-family: 'Varela Round', sans-serif;
+		float: left;
+		text-align: right;
+		line-height: 3;
+	}
+
+	.errors{
+		color: #C00000;
 		font-size: 16px;
+	}
+
+	button{
+		float:right;
 	}
 }
