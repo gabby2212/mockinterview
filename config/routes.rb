@@ -1,6 +1,7 @@
 Mockinterviewinit::Application.routes.draw do
-  resources :welcome
+  resources :welcome, only: [:index, :show]
   resources :students
+  resources :pages, only: [:terms]
   devise_for :users
 
   # The priority is based upon order of creation:

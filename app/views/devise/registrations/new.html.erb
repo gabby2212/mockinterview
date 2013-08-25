@@ -53,7 +53,12 @@
           <%= f.password_field :password_confirmation, class: "field2" %>
         </div>
         <div>
-          <button type="submit" class="simple-button">Sign up now!</button>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">I agree with the Term of Use</div>
+          <%= f.check_box :terms, style:"margin-top: 13px;margin-left: 15px;" %>
+          </div>
+        <div>
+          <button type="submit" class="simple-button blue">Sign up now!</button>
         </div>   
       
      </div>

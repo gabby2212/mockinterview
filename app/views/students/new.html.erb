@@ -10,10 +10,10 @@
 	  	<%= f.text_field :last_name %>
 	  	<br/>
 	  	<div class="key">School</div>
-	  	<%= f.select(:school, options_for_select(['SEAS', 'CC', 'GS']), {}, {:class => "select"}) %>
+	  	<%= f.select(:school, options_for_select(['SEAS', 'Columbia College', 'Barnard', 'General Studies', 'Law School', 'Business School']), {}, {:class => "select"}) %>
 	  	<br/>
 	  	<div class="key">Degree</div>
-	  	<%= f.select(:degree, options_for_select(['BA', 'BS', 'MA']), {}, {:class => "select"})%>
+	  	<%= f.select(:degree, options_for_select(['B.A.', 'B.S.', 'M.A.', 'M.S.', 'PhD']), {}, {:class => "select"})%>
 	  	<br/>
 	  	<div class="key">Graduation Year</div>
 	  	<%= f.number_field :year_of_graduation %>

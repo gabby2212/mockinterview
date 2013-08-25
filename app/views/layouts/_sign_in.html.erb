@@ -7,7 +7,7 @@
           <div class="form-container">
             <div class="email-show">
               <label>Email: <%= current_user.email%> </label>
-              <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "simple-button" %>
+              <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "simple-button blue" %>
             </div>
           </div>
         </fieldset>
@@ -23,7 +23,7 @@
               <div class="form-container">
                 <label>Email:</label><%= f.email_field :email, :autofocus => true, :class => 'field', style: "display:inline" %>
                 <label>Password:</label><%= f.password_field :password, :autofocus => true, :class => 'field', style: "display:inline" %>
-                <button type="submit" class="simple-button">Sign in</button>
+                <button type="submit" class="simple-button blue">Sign in</button>
               </div>
             </div>
         </fieldset>
