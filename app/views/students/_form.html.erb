@@ -16,14 +16,14 @@
   <div class="form-group">
     <%= f.label :school, class: 'control-label col-md-2' %>
     <div class="col-md-10">
-      <%= f.select(:school, options_for_select(['SEAS', 'Columbia College', 'Barnard', 'General Studies', 'Law School', 'Business School', 'SIPA', 'GSAS']), {}, {:class => "form-control"}) %>
+      <%= f.select(:school, ['SEAS', 'Columbia College', 'Barnard', 'General Studies', 'Law School', 'Business School', 'SIPA', 'GSAS'], {}, {:class => "form-control"}) %>
     </div>
   </div>
 
   <div class="form-group"> 
     <%= f.label :degree, class: 'control-label col-md-2' %>
     <div class="col-md-10">
-      <%= f.select(:degree, options_for_select(['B.A.', 'B.S.', 'M.A.', 'M.S.', 'PhD']), {}, {:class => "form-control"})%>
+      <%= f.select(:degree, ['B.A.', 'B.S.', 'M.A.', 'M.S.', 'PhD'], {}, {:class => "form-control"})%>
     </div>
   </div>
 
@@ -44,14 +44,14 @@
   <div class="form-group">
     <%= f.label :interviewing_for, 'Position Type', class: 'control-label col-md-2' %>
     <div class="col-md-10">
-      <%= f.select(:interviewing_for, options_for_select(['Casual', 'Full Time', 'Part Time']), {}, {:class => "form-control"}) %>
+      <%= f.select(:interviewing_for, ['Casual', 'Full Time', 'Part Time'], {}, {:class => "form-control"}) %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :interview_type, 'Industry', class: 'control-label col-md-2' %>
     <div class="col-md-10">
-      <%= f.select(:interview_type, options_for_select(['Academic', 'Advertisement/Marketing/PR', 'Consulting', 'Consumer Products', 'Engineering', 'Entertainment', 'Financial Services', 'Government', 'Healthcare', 'Law', 'Media', 'Programming', 'Non-Profit']), {}, {:class => "form-control"}) %>
+      <%= f.select(:interview_type, ['Academic', 'Advertisement/Marketing/PR', 'Consulting', 'Consumer Products', 'Engineering', 'Entertainment', 'Financial Services', 'Government', 'Healthcare', 'Law', 'Media', 'Programming', 'Non-Profit'], {}, {:class => "form-control"}) %>
     </div>
   </div>
 
