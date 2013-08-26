@@ -4,7 +4,6 @@
 			<div class="title">Sign in</div>
 		</div>
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-		<div class="errors">Your email or password were incorrect.</div>
 			<div class="sign-up-form-field clearfix">
 	          <div class="field-label">Email:</div>
 	          <%= f.email_field :email, :autofocus => true, class: "field" %>
