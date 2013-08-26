@@ -6,11 +6,19 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :terms
   has_one :student
+  validates_acceptance_of :terms
   # attr_accessible :title, :body
 
   def is_student?
   	student.present? && student.persisted? 
   end
+
+  def self.find_for_authentication(conditions)
+    user = super
+    return nil if user.deleted == true
+    user
+  end
+
 end

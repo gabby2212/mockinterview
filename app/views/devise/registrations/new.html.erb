@@ -15,9 +15,9 @@
         </div>
       </div>
       <div class="item carousel-image">
-        <img class = "carousel-image" src = <%= asset_path('cc.jpg')%> alt=""/>
+        <img class = "carousel-image" style="height: 100%;" src = <%= asset_path('cc.jpg')%> alt=""/>
         <div class = "carousel-caption">
-         <h4>It's free. It's simple. It's efficient.</h4>
+         <h4>Teamwork will get you that dream job. We provide the team. You provide the work.</h4>
        
         </div>
       </div>
@@ -39,6 +39,7 @@
         <div class="title">Sign up</div>
       </div>
       <div>
+        <p>You will need a Columbia or Barnard email to sign up</p>
       	<p><%= devise_error_messages! %></p>
         <div class="sign-up-form-field clearfix">
           <div class="field-label">Email:</div>
@@ -53,7 +54,12 @@
           <%= f.password_field :password_confirmation, class: "field2" %>
         </div>
         <div>
-          <button type="submit" class="simple-button">Sign up now!</button>
+        <div class="sign-up-form-field clearfix">
+          <div class="field-label">I agree with the <%= link_to 'Terms of Use',terms_path%></div>
+          <%= f.check_box :terms, style:"margin-top: 13px;margin-left: 15px;" %>
+          </div>
+        <div>
+          <button type="submit" class="simple-button blue">Sign up now!</button>
         </div>   
       
      </div>

@@ -1,0 +1,23 @@
+<div id="matches-box">
+    <div class="matches-wrapper">
+	    <h1>Your Matches<%= link_to 'Edit Profile', edit_student_path(@student), class: "simple-button blue" %></h1>
+	    <p>Below you can see other users who have at least one of the same availabilities as you and are practicing for the same interview type</p>
+		<%if @matches.any?%>
+			<h2>We found you a match!</h2>
+			<p>The following people are practicing for the same interview type as you, and have similar availabilities! Email them and set up a mockinterview.</p>
+			<%@matches.each do |m|%>
+			<div class="match">
+				<p><%= m.first_name%> <%= m.last_name%></p>
+				<p>Email: <%= m.user.email%></p>
+				<p>Available:</p>
+				<%m.convenient.each do |c| %>
+					<p><%=c%></p>
+				<%end%>
+			</div>
+			<%end%>
+		<% else %>
+			<h2>We are sorry, we haven't found you any matches yet</h2>
+			<p> Check back later! As more users sign up you will be matched with them and they'll be able to contact you!</p>
+		<% end %>
+	</div>
+</div>
