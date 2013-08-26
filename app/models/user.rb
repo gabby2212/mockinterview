@@ -14,4 +14,11 @@ class User < ActiveRecord::Base
   def is_student?
   	student.present? && student.persisted? 
   end
+
+  def self.find_for_authentication(conditions)
+    user = super
+    return nil if user.deleted == true
+    user
+  end
+
 end

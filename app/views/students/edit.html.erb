@@ -1,0 +1,55 @@
+<div id="editstudent">
+  <div class="wrapper">
+  <h1>Editing Student Profile</h1>
+   
+  <%= form_for @student do |f|%>
+    <% if @student.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited
+        this profile from being saved:</h2>
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+      <div class="key">First Name </div>
+      <%= f.text_field :first_name %>
+        <br/>
+        <div class="key">Last Name</div>
+        <%= f.text_field :last_name %>
+        <br/>
+        <div class="key">School</div>
+        <%= f.select(:school, options_for_select(['SEAS', 'Columbia College', 'Barnard', 'General Studies', 'Law School', 'Business School', 'SIPA', 'GSAS']), {}, {:class => "select"}) %>
+        <br/>
+        <div class="key">Degree</div>
+        <%= f.select(:degree, options_for_select(['B.A.', 'B.S.', 'M.A.', 'M.S.', 'PhD']), {}, {:class => "select"})%>
+        <br/>
+        <div class="key">Graduation Year</div>
+        <%= f.number_field :year_of_graduation %>
+        <br/>
+        <div class="key">Major</div>
+        <%= f.text_field :major %>
+        <br/>
+        <div class="key">Position Type </div>
+        <%= f.select(:interviewing_for, options_for_select(['Casual', 'Full Time', 'Part Time']), {}, {:class => "select"}) %>
+        <br/>
+        <div class="key">Industry </div>
+        <%= f.select(:interview_type, options_for_select(['Academic', 'Advertisement/Marketing/PR', 'Consulting', 'Consumer Products', 'Engineering', 'Entertainment', 'Financial Services', 'Government', 'Healthcare', 'Law', 'Media', 'Programming', 'Non-Profit']), {}, {:class => "select"}) %>
+        <br/>
+        <div class="key"><strong>Available Times:</div></strong>
+        <br/>
+        <%= f.fields_for :free_times do |builder| %>
+          <%= render 'free_time_fields', f: builder %>
+        <% end %>
+        <div><%= link_to_add_fields "Add Time", f, :free_times %></div>
+
+
+        <br/>
+        <%= f.submit "Save", :class => 'simple-button blue'%>
+
+        <h2>Edit or Delete User Profile: <%= link_to 'Edit User', edit_user_registration_path, class: "simple-button blue" %></h2>
+  <% end %>
+</div>
+</div>

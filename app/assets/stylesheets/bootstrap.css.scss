@@ -4484,6 +4484,12 @@ a.list-group-item.active > .badge,
 }
 
 .carousel-caption {
+  h4{
+    text-shadow: 1px 1px black;
+  }
+  p{
+    text-shadow: 1px 1px black;
+  }
   position: absolute;
   right: 15%;
   bottom: 20px;
