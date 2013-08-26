@@ -352,6 +352,9 @@
 		color: #C00000;
 		font-size: 14px;
 	}
+	p{
+		line-height: 2;
+	}
 }
 #sign-in-devise{
 	.sign-in-container{
@@ -404,5 +407,29 @@
 
 	button{
 		float:right;
+	}
+}
+#terms{
+	.terms-wrapper{
+		width: 60%;
+		background-color: white;
+		margin-left: 50px;
+		margin-top: 20px;
+		border-color: #A8A8A8;
+		border: 1px solid;
+		box-shadow: 2px 2px 1px #888888;
+		padding: 20px;
+
+	}
+
+	h1{
+		font-family: 'Varela Round', sans-serif;
+		font-size: 20px;
+		font-weight: 700;
+		color: #2c6da0;
+	}
+	p{
+		font-family: 'Varela Round', sans-serif;
+		font-size: 14px;
 	}
 }
