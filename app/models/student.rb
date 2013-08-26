@@ -27,7 +27,7 @@ class Student < ActiveRecord::Base
 	def convenient
 		week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 		viable = []
-		free_times.each do |ft|
+		self.free_times.each do |ft|
 			v = "On " + week[ft.week_day - 1] + " at "  + convenient_time(ft.time)
 			viable.push(v)
 		end
