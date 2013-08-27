@@ -29,9 +29,7 @@
 	zoom: 1; /* IE < 8 */
 }
 
-body {
-	background-image: url('satinweave.png');
-}
+
 .body{
 	background-color: black;
 	background-image:url('app/assets/images/pic1.jpg');
@@ -573,8 +571,23 @@ body {
 		margin-right: 20px;
 	}
 }
+#studentform *{
+	font-family: 'Varela Round', sans-serif;
 
-/* to align text with  bootstrap labels */
-.bootstrap-label {
-	line-height: 30px;
+	.form-control{
+		width: 250px;
+	}
+
+	.control-label{
+		font-family: 'Varela Round', sans-serif;
+		float: left;
+		text-align: right;
+	}
+
+	legend{
+		font-family: 'Varela Round', sans-serif;
+		font-size: 20px;
+		font-weight: 700;
+		color: #2c6da0;
+	}
 }

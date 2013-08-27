@@ -5,31 +5,32 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1" class></li>
       <li data-target="#myCarousel" data-slide-to="2" class></li>
-    </ol>  
-    <div class= "carousel-inner">
-      <div class = "active item carousel-image" >
-        <img class = "carousel-image" src = <%= asset_path('nyc.jpg')%> alt=""/>
-        <div class = "carousel-caption">
-        <h4>Want to ace your job interviews?</h4>
-        <p>Register now and find peers to practice with</p>
-        </div>
+      </ol>
+      <div class="carousel slide"><!-- class of slide for animation -->
+        <div class="carousel-inner" style="height:370px;">
+          <div class="item active"><!-- class of active since it's the first item -->
+            <img src=<%= asset_path('nyc.jpg')%> alt="" style="height:370px; width:100%" />
+            <div class="carousel-caption">
+              <h4>Want to ace your job interviews?</h4>
+              <p>Register now and find peers to practice with</p>
+            </div>
+          </div>
+          <div class="item" style="height:370px;">
+            <img src=<%= asset_path('cc.jpg')%> alt="" style="height:100%; width:100%"/>
+            <div class="carousel-caption">
+              <h4>Teamwork will get you that dream job. We provide the team. You provide the work.</h4>
+            </div>
+          </div>
+          <div class="item" style="height:370px;">
+            <img src=<%= asset_path('Corporate.jpg')%> alt="" style="width:100%"/>
+            <div class="carousel-caption">
+              <h4>Help others succeed and get twice as much in return</h4>
+            </div>
+          </div>
+        </div>  
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
       </div>
-      <div class="item carousel-image">
-        <img class = "carousel-image" style="height: 100%;" src = <%= asset_path('cc.jpg')%> alt=""/>
-        <div class = "carousel-caption">
-         <h4>Teamwork will get you that dream job. We provide the team. You provide the work.</h4>
-       
-        </div>
-      </div>
-      <div class = "item carousel-image">
-        <img class = "carousel-image" src = <%= asset_path('Corporate.jpg')%> alt=""/>
-        <div class = "carousel-caption">
-        <h4>Help others succeed and get twice as much in return</h4>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
-      <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
     </div>
   </div>
   <div id="sign-up">
